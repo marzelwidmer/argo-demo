@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: contracts
+  name: contracts
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contracts
+  template:
+    metadata:
+      labels:
+        app: contracts
+    spec:
+      containers:
+        - name: contracts
+          image: springcloud/spring-cloud-contract-stub-runner:2.2.4.RELEASE
+          env:
+            - name: STUBRUNNER_IDS
+              value: "ch.keepcalm.demo:kboot-puername:+:stubs:9999"
+            - name: STUBRUNNER_STUBS_MODE
+              value: "REMOTE"
+            - name: STUBRUNNER_GENERATE_STUBS
+              value: "TRUE"
+            - name: STUBRUNNER_REPOSITORY_ROOT
+              value: "git://https://github.com/marzelwidmer/contracts.git"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: contracts
+  name: contracts
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 9999
+  selector:
+    app: contracts
+  type: NodePort
+
