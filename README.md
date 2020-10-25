@@ -1,6 +1,9 @@
 # argo-demo
 Argo CD - Demo Project
 
+![Argo](img/Argo.png)
+
+
 ## Install Argo CLI
 ```
 brew install argocd
