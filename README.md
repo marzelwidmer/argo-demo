@@ -3,7 +3,7 @@ Argo CD - Demo Project
  
 
 ![Argo](img/Argo.png?raw=true "Argo")
-
+![Screenshot](screenshot.png)
 
 ## Install Argo CLI
 ```
