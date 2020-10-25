@@ -70,6 +70,11 @@ argocd account update-password
 # Create App
 ```
 argocd app create kboot --repo https://github.com/marzelwidmer/argo-demo.git --path manifest --dest-server https://kubernetes.default.svc --dest-namespace default
+
+argocd app create redis --repo https://github.com/marzelwidmer/argo-demo.git --path manifest/redis --dest-server https://kubernetes.default.svc --dest-namespace default
+
+argocd app create contracts --repo https://github.com/marzelwidmer/argo-demo.git --path manifest/contracts --dest-server https://kubernetes.default.svc --dest-namespace default
+
 ```
 
  
