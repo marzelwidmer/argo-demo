@@ -45,19 +45,10 @@ kubectl run -i --rm --restart=Never curl-client --image=tutum/curl:alpine --comm
 pod "curl-client" deleted
 ```
 
-
-
-#### Create Redis only
+## Synch App
 ```
-argocd app create redis --repo https://github.com/marzelwidmer/argo-demo.git --path manifest/redis --dest-server https://kubernetes.default.svc --dest-namespace default
+argocd app sync kboot
 ```
-#### Create Contracts only
-```
-argocd app create contracts --repo https://github.com/marzelwidmer/argo-demo.git --path manifest/contracts --dest-server https://kubernetes.default.svc --dest-namespace default
-```
-
- 
-
 
 
 

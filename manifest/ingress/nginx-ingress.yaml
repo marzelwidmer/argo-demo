@@ -13,4 +13,4 @@ spec:
      - path: /
        backend:
          serviceName: contracts
-         servicePort: 8080
+         servicePort: 80
