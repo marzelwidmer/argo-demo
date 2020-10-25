@@ -45,6 +45,29 @@ kubectl run -i --rm --restart=Never curl-client --image=tutum/curl:alpine --comm
 pod "curl-client" deleted
 ```
 
+## Test Contracts oder Ingress
+See also : [Blog Minikube Ingress Controller](https://blog.marcelwidmer.org/posts/2020-05-01-minikube-ingress-controller) 
+```
+http -j http://test.minikube.me/api/persons
+
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Sun, 25 Oct 2020 08:34:33 GMT
+Matched-Stub-Id: e6546194-eda5-4d86-b644-9694fd421ed6
+Server: nginx/1.19.1
+Transfer-Encoding: chunked
+Vary: Accept-Encoding, User-Agent
+
+[
+    {
+        "firstName": "John"
+    }
+]
+
+```
+
 ## Synch App
 ```
 argocd app sync kboot
