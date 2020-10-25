@@ -1,7 +1,8 @@
 # argo-demo
 Argo CD - Demo Project
+ 
 
-![Argo](img/Argo.png)
+![Argo](img/Argo.png?raw=true "Argo")
 
 
 ## Install Argo CLI
