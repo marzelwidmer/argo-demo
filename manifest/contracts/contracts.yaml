@@ -25,7 +25,7 @@ spec:
             - name: STUBRUNNER_GENERATE_STUBS
               value: "TRUE"
             - name: STUBRUNNER_REPOSITORY_ROOT
-              value: "git:/git@ssh.dev.azure.com:v3/helsana/MYHELSANA/contracts"
+              value: "git://https://github.com/marzelwidmer/contracts.git"
 ---
 apiVersion: v1
 kind: Service
